@@ -1,0 +1,97 @@
+/* page and header */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #fee;
+  color: #644;
+  font-family: sans-serif;
+}
+
+a{
+	text-decoration: none;
+}a:hover{
+	text-decoration: underline;
+}
+
+header h1{
+	margin: 0;
+	background: #383333;
+	color: white;
+	font-size: 6em;
+	text-align: center;
+	border-bottom: 2mm solid #eaa;
+	font-family: serif;
+	box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+#layout-content{
+	max-width: 800px;
+	margin: auto;
+}
+
+/* cover images */
+
+img.cover{
+	float: left;
+	margin-right: 0.5em;
+	max-width: 100%
+}
+
+/* game blocks */
+
+div.block{
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: inset 0 0 1em #fee;
+	margin-top: 1em;
+}
+a.block{
+	color: black;
+}a.block:hover{
+	text-decoration: none;
+	color:#888;
+}
+
+/* other stuff */
+
+.iconlink img{
+    vertical-align:sub;
+    margin-left:1em;
+}
+
+#layout-footer{
+    margin-top: 2em;
+    text-align:center;
+}
+
+.footblock{
+    display:inline-block;
+}
+
+/* old, deprecated */
+
+main,
+.screen,
+.wrapper{
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.screen{
+  min-height: 100vh;
+}
+.wrapper {
+  padding: 15px;
+  width: 830px;
+  max-width: 100%;
+  min-height: 200px;
+  margin: auto;
+}

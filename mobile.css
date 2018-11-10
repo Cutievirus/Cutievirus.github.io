@@ -1,0 +1,9 @@
+img.cover{
+	float: none;
+	display: block;
+	margin: auto;
+}
+
+header h1{
+    font-size: 17vw;    
+}
