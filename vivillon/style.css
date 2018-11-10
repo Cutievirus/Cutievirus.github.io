@@ -1,0 +1,96 @@
+:root{
+	--bg-color:#ddd;
+	--border-color:#ccc;
+}
+
+html{
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 1em;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+
+
+table{
+	border-collapse: collapse;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid var(--border-color);
+	border-top: 1px solid var(--border-color);
+	float: left;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+td.active{
+	width: 1em;
+	height: 1em;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid var(--border-color);
+	border-left: 1px solid var(--border-color);
+}
+/*
+body{
+	cursor: url(img/cursor_pointer.png) 0 0, default;
+}
+*/
+body td.active{
+	cursor: url(img/cursor_pencil.png) 0 16, default;
+}
+body.control td.active{
+	cursor: url(img/cursor_eyedrop.png) 0 16, default;
+}
+body.shift td.active{
+	cursor: url(img/cursor_bucket.png) 0 16, default;
+}
+
+
+#wrapper{
+	text-align: left;
+	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
+	background-color: #ddd;
+	background-color: var(--bg-color);
+	overflow: hidden;
+	display: inline-block;
+	max-width: 800px;
+}
+#wrapper>div{
+	float: left;
+	margin: 1em;
+}
+
+.generator{
+	display: table;
+	padding-bottom:1em;
+}
+
+.generator .heading{
+	text-transform:capitalize;
+	margin-bottom:0;
+}
+.generator button{
+	display: block;
+	width: 100%;
+}
+canvas{
+	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
+	background-color:#fff;
+}
+
+#colorText{
+	width: 6em;
+	border: 1px solid #ccc;
+}

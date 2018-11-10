@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vivillon Pattern Creator</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="lib/FileSaver.js"></script>
+    <script src="lib/canvas-toBlob.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<noscript>Please enable Javascript.</noscript>
+<div id="wrapper">
+	<div id="generators">
+	</div>
+	<div id="draw">
+		<table id="colorTable"></table>
+	</div>
+	<div id="controls">
+		<label for="colorPicker">Color</label>
+		<br>
+		<input id="colorPicker" type="color" value="#ffffff">
+		<input id="colorText" type="text" value="ffffff">
+		<br>
+		<input id="autoGenerate" type="checkbox" checked><label for="autoGenerate">&nbsp;Auto&nbsp;Generate</label>
+		<br>
+		<button id="preset_save">Save Preset</button>
+		<br>
+		<button id="preset_load">Load Preset</button>
+		<input id="preset_load_file" type="file" style="display:none">
+	</div>
+</div>
+<footer>
+	<img src="{{ 'assets/page/vivillon/img/cursor_eyedrop.png'|theme }}"> Ctrl - Pick Color<br>
+	<img src="{{ 'assets/page/vivillon/img/cursor_bucket.png'|theme }}"> Shift - Fill Color
+</footer>
+</body>
+</html>
+
+
+
+
+
