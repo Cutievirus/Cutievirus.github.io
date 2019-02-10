@@ -48,12 +48,12 @@ header h1{
 #section-games>a{
   position: relative;
   margin: 0.5em;
-  border-radius:0.3em;
   overflow: hidden;
   font-size: 1.8em;
 }
 
 #section-games>a img{
+  border-radius:0.3em;
   width: 100%;
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: -webkit-optimize-contrast;
