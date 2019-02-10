@@ -1,0 +1,109 @@
+/* page settings */
+html,body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #383333;
+  color:#eaa;
+  font-family: sans-serif;
+}
+
+/* hyperlinks */
+a{
+  text-decoration: none;
+  color: #a74b4b;
+}a:hover{
+	text-decoration: underline;
+}
+
+/* header */
+header h1{
+	margin: 0;
+	background: #383333;
+	color: white;
+	font-size: 4em;
+	text-align: left;
+	border-bottom: 2mm solid #eaa;
+	font-family: serif;
+	box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+#logo{
+  width:1.7em;
+  margin: 0.2em 0.5em;
+  margin-right: 0;
+  margin-bottom: -0.6em;
+  position: relative;
+  z-index: 10;
+}
+
+#section-games{
+  background-color: black;
+  min-height: 33vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0.5em 1em;
+}
+
+#section-games>a{
+  position: relative;
+  margin: 0.5em;
+  border-radius:0.3em;
+  overflow: hidden;
+  font-size: 1.8em;
+}
+
+#section-games>a img{
+  width: 100%;
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#section-games>a div{
+  text-align: center;
+  font-weight: bold;
+  color: silver;
+}
+
+/* other stuff */
+
+.iconlink img{
+    vertical-align:sub;
+    margin-left:1em;
+}
+
+#layout-footer{
+    margin-top: 2em;
+    text-align:center;
+}
+
+.footblock{
+    display:inline-block;
+}
+
+/* old, deprecated */
+
+main,
+.screen,
+.wrapper{
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.screen{
+  min-height: 100vh;
+}
+.wrapper {
+  padding: 15px;
+  width: 830px;
+  max-width: 100%;
+  min-height: 200px;
+  margin: auto;
+}

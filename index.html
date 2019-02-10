@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>Cutievirus</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link href="theme.css" rel="stylesheet">
-        <link href="mobile.css" rel="stylesheet" media="(max-width: 600px)">
-        <link href="print.css" rel="stylesheet" media="print">
-            </head>
-    <body>
+	<meta charset="utf-8">
+	<title>Cutievirus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href="style.css" rel="stylesheet">
+	<script src="lib/vue.min.js"></script>
+</head>
+<body><div id='vue'>
+<header id="layout-header">
+	<h1>
+		<img src="favicon.png" id="logo">
+		Cutievirus
+	</h1>
+</header>
 
-        <!-- Header -->
-        <header id="layout-header">
-            <!-- Nav -->
-<h1>CutieVirus</h1>        </header>
-
-        <!-- Content -->
-        <div id="layout-content">
-            <section id="section-games">
-                <!--
-    <a href="https://dreadwing93.itch.io/neo-starlight-epitaph" class="block"><div class="block">
-	<img class="cover" src="img/epitaph.png">
-	<h3>Neo Starlight Epitaph</h3>
-	<p>
-	An orbital space shooter. Fly around and shoot aliens!
-</p></div></a>
--->
-<a href="http://filosis.cutievirus.com/" class="block"><div class="block">
-	<img class="cover" src="img/filosis.png">
-	<h3>Super Filovirus Sisters</h3>
-	<p>
-	Starring Ebola-chan and her sisters, Marburg and Lloviu. 
-</p><p>
-	With the demise of human-kind, the eternal struggle between disease and
- cure seemed to be finally over. However, Cure-chan is a sore loser, and
- provokes the viral sisters to reignite the conflict.
-</p></div></a>    <a href="https://dreadwing93.itch.io/the-frog-made-of-jam" class="block"><div class="block">
-	<img class="cover" src="img/jamfrog.png">
-	<h3>The Frog Made of Jam</h3>
-	<p>
-	Jam Frog is a frog made of jam. He is often left out of things, but he 
-hopes to make a lot of friends  at the upcoming Frog Party. If he brings
- lots of flies, then he's sure to make lots of friends.
-</p></div></a></section>
+<section id="section-games">
+	<a
+	v-for="game in games"
+	v-if="!game.hidden"
+	:href="game.url"
+	>
+		<img :src="game.img?game.img:'img/epitaph.png'">
+		<div v-text="game.name"></div>
+	</a>
+</section>
 
 <section id="section-links"> <div class="block">
-    <a href="https://minecraft.curseforge.com/members/dreadwing93/projects" class="block iconlink"><h2>
-    <img class="icon" src="img/mc.png">
-    Minecraft Mods
+	<a href="https://minecraft.curseforge.com/members/dreadwing93/projects" class="block iconlink"><h2>
+	<img class="icon" src="img/mc.png">
+	Minecraft Mods
 </h2></a>    <a href="mv-plugins" class="block iconlink"><h2>
-    <img class="icon" src="img/mv.png">
-    RPG Maker MV Plugins
+	<img class="icon" src="img/mv.png">
+	RPG Maker MV Plugins
 </h2></a></div> </section>        </div>
 
-        <!-- Footer -->
-        <footer id="layout-footer">
-            Thank you for visiting!<br><br>
-<a href="https://discord.gg/4SJ5dFN"><img src="img/discord.png">Discord</a>
+		<!-- Footer -->
+		<footer id="layout-footer">
+			Thank you for visiting!<br><br>
+<a href="http://cutievirus.com/discord"><img src="img/discord.png">Discord</a>
 <a href="https://twitter.com/dredrail" rel="me"><img src="img/twitter.png">Twitter</a>
-        </footer>
+		</footer>
 
-        <!-- Scripts -->
-        <script src="analytics.js"></script>
-        
-    
+		<!-- Scripts -->
+		<script src="analytics.js"></script>
+		
+	
+</div>
+<script src="script.js"></script>
 </body></html>
