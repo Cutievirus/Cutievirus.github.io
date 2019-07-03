@@ -21,6 +21,7 @@ location = url.toString();
 if('oauth' in params){
 	localStorage.setItem('itchio_access_token',params.access_token);
 	fetch(`http://localhost:${state}/?provider=${params.oauth}&access_token=${params.access_token}`);
+	vue.$data.messages.push("Your itch.io account has been linked successfully.");
 }
 
 const itchio_access_token = localStorage.getItem('itchio_access_token');

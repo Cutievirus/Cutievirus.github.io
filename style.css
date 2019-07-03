@@ -54,6 +54,18 @@ header h1{
   border-bottom: 0.125rem solid #a94e4e;
 }
 
+#section-messages{
+  background-color: black;
+  padding: 1rem;
+}
+#section-messages p{
+  background-color: #383333;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: inline-block;
+}
+
 #section-games{
   background-color: black;
   min-height: 33vh;

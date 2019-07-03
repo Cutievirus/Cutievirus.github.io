@@ -3,6 +3,7 @@ const vue = new Vue({
 	data:{
 		games:[],
 		starmium:0,
+		messages:[],
 	}
 });
 

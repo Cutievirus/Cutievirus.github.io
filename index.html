@@ -19,7 +19,9 @@
 		<span class="starmium-value">0.0.00</span>
 	</span>
 </header>
-
+<section id="section-messages" v-if="messages.length">
+	<p v-for="message in messages" v-html="message"></p>
+</section>
 <section id="section-games">
 	<a
 	v-for="game in games"
