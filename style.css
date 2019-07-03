@@ -17,6 +17,9 @@ a{
 }
 
 /* header */
+#layout-header{
+  position: relative;
+}
 header h1{
 	margin: 0;
 	background: #383333;
@@ -34,6 +37,21 @@ header h1{
   margin-bottom: -0.6em;
   position: relative;
   z-index: 10;
+}
+
+#starmium-count{
+  display: inline-block;
+  position: absolute;
+  right:0; bottom: 0;
+  color:#e75454;
+  margin:1em;
+}
+.starmium-icon{
+  display: inline-block;
+  transform: scale(1.5);
+}
+.starmium-value{
+  border-bottom: 0.125rem solid #a94e4e;
 }
 
 #section-games{
