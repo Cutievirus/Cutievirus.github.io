@@ -1,8 +1,12 @@
 [
 	{
-    "name":"Darling Abyss",
-    "url":"https://cutievirus.itch.io/darling-abyss",
-    "img":"img/darlingabyss.png"
+		"name":"Slime & Centipede",
+		"url":"https://cutievirus.itch.io/slime-centipede",
+		"img":"img/slime&centipede.png"
+	},{
+	    "name":"Darling Abyss",
+	    "url":"https://cutievirus.itch.io/darling-abyss",
+	    "img":"img/darlingabyss.png"
 	},{
 		"name":"Super Filovirus Sisters",
 		"url":"http://filosis.cutievirus.com/",
