@@ -20,7 +20,7 @@ location = url.toString();
 
 if('oauth' in params){
 	localStorage.setItem('itchio_access_token',params.access_token);
-	//fetch(`http://localhost:${state}/?access_token=${params.access_token}`);
+	fetch(`http://localhost:${state}/?provider=${params.oauth}&access_token=${params.access_token}`);
 }
 
 const itchio_access_token = localStorage.getItem('itchio_access_token');
