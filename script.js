@@ -15,8 +15,8 @@ for (const key in params){
 	const value = params[key];
 	hash+=`${hash.length>1?'&':''}${key}=${value}`;
 }
-url.hash=hash;
-location = url.toString();
+url.hash = hash;
+history.replaceState({}, document.title, "/"+hash);
 
 if('oauth' in params){
 	localStorage.setItem('itchio_access_token',params.access_token);
@@ -25,4 +25,4 @@ if('oauth' in params){
 }
 
 const itchio_access_token = localStorage.getItem('itchio_access_token');
-
+alert("HI");
