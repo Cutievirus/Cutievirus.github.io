@@ -25,4 +25,3 @@ if('oauth' in params){
 }
 
 const itchio_access_token = localStorage.getItem('itchio_access_token');
-alert("HI");
