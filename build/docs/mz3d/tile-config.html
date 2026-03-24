@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../styles/main.css" />
+		<link rel="stylesheet" href="../../styles/fonts.css" />
+		
+		<link href="../../_app/immutable/assets/Layout.BWl0NnMt.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/MessageWindow.BcOnnu-s.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Img.ByoMCUil.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/ColumnLayout.rhr6OBw4.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/DocNav.BkWSd5u3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/14.CDnHAp4n.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Anchor.KM62CLi2.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Code.TKo9a_QB.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Version.D9rgK15K.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BZbYkm9g.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CC_KAKoS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.BjkBv5nx.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.D23NuegA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.BT_eMuJg.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.z4QLvHIx.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.BhrrHbMI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Layout.Cc-7wxlH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Img.CZ6ZAp8Z.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/3.DsX3p4mc.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ColumnLayout.CZ3t2REy.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DocNav.D3EDvnwi.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Link.DpGiBmhP.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/4.CgM8L59W.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/5.BXctJfOm.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/14.CxpbPzhI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Anchor.DPTg1Ks6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Code.UvG0J7Qo.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PageTitle.DTA_6V-l.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.hyYBTNij.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Version.52FMOf3v.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ShapeFunction.D3kSnPl0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ParameterList.CApmv983.js"><title>Tile Configuration - MZ3D</title><!-- HEAD_svelte-ls0w6q_START --><link rel="icon" href="/favicon.png"><!-- HEAD_svelte-ls0w6q_END --><!-- HEAD_svelte-8zs03i_START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- HEAD_svelte-8zs03i_END --><!-- HEAD_svelte-pm843m_START --><!-- HEAD_svelte-pm843m_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+
+		
+
+
+
+
+<div class="main-layout" data-theme="Electra">
+    <header>
+	<nav class="svelte-yz8s3k">
+		<a href="/" class="svelte-yz8s3k">
+            
+            <img src="/logo128.png" alt="" width="16px" height="16px" class=" svelte-wp4vif" style="--width:16px;--height:16px;undefined" naturalWidth="0" naturalHeight="0">
+            Cutievirus
+        </a>
+		
+		<a href="/docs" class="svelte-yz8s3k" data-svelte-h="svelte-12oadd4">Documentation</a>
+	</nav>
+</header>
+    <div class="container">
+        
+    
+				<div class="svelte-mayw9m">
+    
+    
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+        
+						
+								
+
+
+<h1 class="svelte-ahxbmh">
+        Tile Configuration - MZ3D
+    </h1>
+
+
+
+<h2 id="textures" class="svelte-ahxbmh">
+        <a href="#textures" class="svelte-ahxbmh">Texture Functions</a>
+    </h2>
+
+<p data-svelte-h="svelte-1eglt4c">
+    A tile can be configured to have different textures for the top, bottom, and sides.
+    <br>A special inside texture will be used if the tile has <a href="#depth">depth</a> configured.
+    <br>Different texutres can also be used for the north, south, east, and west sides.
+    <br>If unset, the inside texture will be the same as the side texture, and the side and bottom textures will be the same as the top texture.
+</p>
+<p data-svelte-h="svelte-1in5tp9">
+    Each texture can be set with the respective <code>top()</code>, <code>side()</code>, <code>bottom()</code>, <code>inside()</code>, <code>north()</code>, <code>south()</code>, <code>east()</code>, and <code>west()</code> function.
+    <code>Texture()</code> can be used to set both the top and side texture. at the same time.
+</p>
+
+<p data-svelte-h="svelte-stwwka">A texture is defined using the following list of parameters:</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">
+img,x,y,w,h|alpha|glow,glowintensity|anim:animx,animy
+</code></pre>
+
+<p>
+    The img parameter should be either a tileset image name (A1-5, B, C, D, E) or a custom image name. Custom images are loaded form the img/MZ3D folder.
+    Filenames should include the file extension.
+    If the image path starts with a slash, it will be loaded relative to the project root folder instead. Example: <code data-svelte-h="svelte-1visai7">texture(/img/tilesets/Inside_B.png)</code>
+</p>
+
+<p data-svelte-h="svelte-1qwdtqw">
+    The x and y parameters can be prefixed with + or - to use relative values
+    <small>(in other parts of the plugin + is required to indicate relative because - means negative, but there are no negative tile coordinates so it&#39;s unambiguous here)</small>
+</p>
+
+<p data-svelte-h="svelte-y93ma1">
+    The alpha parameter can be used to make the texture partially transparent. Or, you can set alpha to 1 to turn on alpha blending.
+    <br>Examples: <code>texture(|1), texture(alpha:0.5)</code>
+</p>
+
+<p data-svelte-h="svelte-hc17oc">
+    The glow parameter will add an emissive color to make the texture glow in the dark. The effect works well for lava and other things that should emit light.
+    <br>Examples: <code>texture(||1), texture(glow:red)</code>
+</p>
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="normal" data-radius="5">
+            
+            
+            
+    <p data-svelte-h="svelte-pajxct">
+        A second parameter can be provided to control the intensity of the premium glow effect.
+    </p>
+    
+    <br>Examples: <code data-svelte-h="svelte-150pqnu">texture(||1,0), texture(glow:red,1)</code>
+    <div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq  bug" data-mode="block" data-radius="5">
+            
+            <br>
+            
+        Due to a bug the second parameter seems to not work for tile textures... Glow intensity will always be 1.
+        <br> For now, use the <a href="#glow" data-svelte-h="svelte-jipaxt">glow function</a> instead if you need to set the glow intensity.
+    
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+<p data-svelte-h="svelte-1623tze">
+    anim is an alias for animx and can be used with a colon to jump to that parameter.
+    <br> Animx and animy are used for defining custom animated tiles.
+    The number supplied to animx and animy will be the offset used by the animation.
+    The final offset will be equal to the anim offset times the current frame.
+    <br>Animx has frames 0,1,2,1 (like water animations), while animy has frames 0,1,2 (like waterfall animations).
+    <br>Examples: <code>texture(|||1,0), texture(anim:0,1)</code>
+</p>
+
+
+<h2 id="ceiling" class="svelte-ahxbmh">
+        <a href="#ceiling" class="svelte-ahxbmh">Ceiling Function</a>
+    </h2>
+
+<p>
+    Overrides the <a href="map-config#ceiling">ceiling config set for the map</a> for this tile. This only works for bottom layer tiles.
+</p>
+
+
+<h2 id="height" class="svelte-ahxbmh">
+        <a href="#height" class="svelte-ahxbmh">Height Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-1i43yf5">
+    The height function, as the name implies will set the height for a tile.
+    Tiles will be stacked on top of tiles layered below them, so if you configure height on both an upper layer and lower layer tile,
+    their heights will be effectively combined.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">height(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+<h2 id="depth" class="svelte-ahxbmh">
+        <a href="#depth" class="svelte-ahxbmh">Depth Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-k74u1g">
+    The depth function will set the depth of a tile. Depth is like a negative height,
+    the tile&#39;s effective height will be its own height minus its depth. If there is a tile on a layer below the tile with depth,
+    it will &quot;cut a hole&quot; in that tile, reducing that tile&#39;s height instead.
+    <br>The primary use is to create pits, bodies of water, and other holes in the ground.
+    The side texture of the tile will use the &quot;inside&quot; texture for the part of the height caused by the depth.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">depth(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+<h2 id="fringe" class="svelte-ahxbmh">
+        <a href="#fringe" class="svelte-ahxbmh">Fringe Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-19glyi5">
+    The fringe function will add a gap between the tile and the tile below it, effectively making the tile appear to be floating.
+    The player can walk under the tile if the gap is large enough.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">fringe(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+<h2 id="float" class="svelte-ahxbmh">
+        <a href="#float" class="svelte-ahxbmh">Float Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-or0x3">
+    The float function will set a distance above the tile that boats and ships should float above the tile.
+    This is useful if you used the depth function to create a body of water and want boats to float near the top of the water instead of at the bottom.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">float(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+<h2 id="shape" class="svelte-ahxbmh">
+        <a href="#shape" class="svelte-ahxbmh">Shape Function</a>
+    </h2>
+
+<p>
+    The shape function will set the shape of the tile. The shape determines how the tile&#39;s mesh will be built and how it will behave.
+</p>
+<dl><dt data-svelte-h="svelte-1ooe3lh">flat</dt><dd>
+        The default shape. Flat tiles normally appear as a flat plane, but when given height will have walls that use the side texture.
+    </dd><dt data-svelte-h="svelte-i1mz0q">cross</dt><dd data-svelte-h="svelte-xhsz52">An intersection of two verical planes.</dd><dt data-svelte-h="svelte-1pa5ioa">xcross</dt><dd data-svelte-h="svelte-1n7bls2">Same as cross, but angled at 45deg. Essentially a shorthand for <code>shape(cross),rot(45)</code></dd><dt data-svelte-h="svelte-1q9ewi2">8cross</dt><dd data-svelte-h="svelte-yomgwk">A combination of cross and xcross.</dd><dt data-svelte-h="svelte-1biz6zv">sprite</dt><dd data-svelte-h="svelte-tp9cva">
+        <p>A special shape that will always face the camera.</p>
+        <p>Takes a second parameter for <a href="#doff">dynamic offset</a>.</p>
+    </dd><dt data-svelte-h="svelte-1463zcb">billboard</dt><dd data-svelte-h="svelte-raikco">
+        Formerly known as the &quot;tree&quot; shape, also named &quot;board&quot; and &quot;cardboard&quot;.
+        <br>A billboard will rotate to match the camera&#39;s yaw, but not its pitch.
+    </dd><dt data-svelte-h="svelte-1trvg5">fence</dt>
+    <dd data-svelte-h="svelte-lorb5">
+        A shape that will connect to other nearby tiles to create a fence.
+        A second parameter can be provided to set whether it should have fence posts (true by default).
+        <br>Examples: <code>shape(fence), shape(fence,false)</code>
+    </dd><dt data-svelte-h="svelte-13wzyb2">wall</dt><dd data-svelte-h="svelte-11raevs">
+        The wall shape is a flat plane that stands straight up instead of lying on the ground.
+        It&#39;s intended for creating wall decorations by using it alongside the <a href="#rot">rot function</a> and <a href="#offset">offset functions</a>.
+    </dd><dt data-svelte-h="svelte-1pee1tj">slope</dt>
+    <dd data-svelte-h="svelte-cpgxd8">
+        A shape for creating slopes that let the player walk up or down to different elevations. Can be used as ramps or stairs, sloped roofs, or hills.
+        Takes a second parameter which is the slope&#39;s height.
+        <br>Examples: <code>shape(slope), shape(slope,2)</code>
+        <br>For more information and functionality, see the <a href="#slope">slope function</a>.
+    </dd></dl>
+
+
+<h2 id="rot" class="svelte-ahxbmh">
+        <a href="#rot" class="svelte-ahxbmh">Rotation Functions</a>
+    </h2>
+
+<p data-svelte-h="svelte-1xkzqq7">
+    There are four rotation functions, yaw, pitch, roll, and rot.
+</p>
+<p data-svelte-h="svelte-1cgmswk">
+    Rot is the simple rotation function, and is usually only used on its own, but when used with the others it is applied last.
+</p>
+<p>
+    Yaw rotates the tile around the z axis, effectively turning it left and right.
+</p>
+<p>
+    Pitch rotates the tile around the x axis, effectively turning it up and down.
+</p>
+<p>
+    Roll rotates the tile around the y axis, effectively tilting it side to side.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">yaw(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+pitch(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+roll(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+rot(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+<h2 id="offset" class="svelte-ahxbmh">
+        <a href="#offset" class="svelte-ahxbmh">Offset Functions</a>
+    </h2>
+
+<p data-svelte-h="svelte-1hjggeo">
+    There are three offset functions, xoff, yoff, and zoff, which add an offset to the position in the respective dimension. There is also an offset function which can be used to set all three at once.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">xoff(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+yoff(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+zoff(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)
+offset(<samp title="number" data-svelte-h="svelte-p3ccxq">x</samp>,<samp title="number" data-svelte-h="svelte-eyvwfd">y</samp>,<samp title="number" data-svelte-h="svelte-1dzwvas">z</samp>)</code></pre>
+
+
+
+<h2 id="doff" class="svelte-ahxbmh">
+        <a href="#doff" class="svelte-ahxbmh">Dynamic Offset</a>
+    </h2>
+
+<p>
+    The DOff Function controls the tile&#39;s &quot;Dynamic Offset&quot;. Dynamic offset is the amount the tile will be offset towards the camera.
+    This is usually used for the sprite shape, but other dynamic shapes can be given a dynamic offset as well, such as the board shape or the model or mesh shapes.
+    The default dynamic offset for sprites is settable in the plugin parameters through the &quot;Sprite Dynamic Offset&quot; parameter.
+</p>
+<p data-svelte-h="svelte-cd2jlp">
+    If the value provided to this function includes the letter &quot;p&quot;, the dynamic offset will be adjusted according to the camera&#39;s pitch.
+    The offset will be zero when the camera pitch is parallel to the ground, and will be the full offset when the camera is looking straight down.
+</p>
+
+Examples:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">doff(0), doff(.45), doff(.45p)</code></pre>
+
+
+<h2 id="tileoffset" class="svelte-ahxbmh">
+        <a href="#tileoffset" class="svelte-ahxbmh">Tile Offset Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-1b9smjk">
+    The tile offset function will offset the tile&#39;s actual position on the map.
+    This is used by default for star tiles to move them one tile down onto the tile below them.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">tileoffset(<samp title="number" data-svelte-h="svelte-p3ccxq">x</samp>,<samp title="number" data-svelte-h="svelte-eyvwfd">y</samp>)</code></pre>
+
+
+<h2 id="slope" class="svelte-ahxbmh">
+        <a href="#slope" class="svelte-ahxbmh">Slope Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-q7oh37">
+    The slope sets the tile shape to slope and configures other slope-related settings.
+</p>
+<p data-svelte-h="svelte-1c78zj5">parameter list:</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">height,direction|top,side|texrot</code></pre>
+
+<p data-svelte-h="svelte-16mhbjq">
+    The height parameter is the height of the slope. The direction parameter is the direction the slope is facing.
+    <br>Direction can be <code>n</code>, <code>s</code>, <code>e</code>, <code>w</code>, <code>ne</code>, <code>se</code>, <code>sw</code>, <code>nw</code>.
+    <br>The diagonal directions can be appended with <code>i</code> or <code>o</code> to indicate they&#39;re an inner or outer corner, for example <code>nei</code> or <code>neo</code>.
+    <br>Direction can also be set up with the shadow pen <span class="TODO">link to mapping page</span>.
+    <br>Examples: <code>slope(2,e), slope(2,e), slope(2,swi)</code>
+</p>
+
+<p>
+    The top and side parameters are the textures used for the top and side of the slope. If these aren&#39;t set, it will use the normal top and side textures for the tile.
+    <br>The texture parameters should be wrapped with <code>{}</code> to group them into a single parameter.
+    <br>Example: <code>slope(2,top:{A4,0,0},side:{A4,0,1})</code>
+</p>
+
+<p data-svelte-h="svelte-1uyud1r">
+    The texrot parameter is whether the texture should be rotated to match the slope&#39;s direction. For regular tiles this is true by default, but for autotiles it&#39;s false.
+    <br>Example: <code>slope(2||false), slope(2,texrot:true)</code>
+</p>
+
+
+<h2 id="pass" class="svelte-ahxbmh">
+        <a href="#pass" class="svelte-ahxbmh">Pass Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-121y1uj">
+    The pass function can be used to alter the passability of a tile. Possible values are <code>pass(o)</code> meaning you can walk on the tile, <code>pass(x)</code> meaning you cannot walk on the tile, and <code>pass(*)</code> meaning you can walk through the tile.
+</p>
+
+
+<h2 id="width" class="svelte-ahxbmh">
+        <a href="#width" class="svelte-ahxbmh">Width Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-t3rnk6">
+    The width function can be used to set the width of a tile. This can be useful for creating pillars that are thicker or thinner than a normal tile.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">width(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+
+
+<h2 id="slant" class="svelte-ahxbmh">
+        <a href="#slant" class="svelte-ahxbmh">Slant Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-1cpxd7c">
+    The slant function can be used to give the walls of the tile a slight angle instead of being perfectly vertical.
+    The exact angle will vary depending on the height of the tile, because the value provided is the extra vertical distance the bottom of the tile will occupy.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">width(<samp title="number" data-svelte-h="svelte-11z14xk">n</samp>)</code></pre>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+    
+<h2 id="shadow" class="svelte-ahxbmh">
+        <a href="#shadow" class="svelte-ahxbmh">Shadow Function</a>
+    </h2>
+
+    <p data-svelte-h="svelte-13gfl95">Whether the tile should cast shadows, true by default.</p>
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">shadow(<samp data-svelte-h="svelte-17yyxv0">true/false</samp>)</code></pre>
+
+        </div>
+    </div>
+
+
+
+<h2 id="glow" class="svelte-ahxbmh">
+        <a href="#glow" class="svelte-ahxbmh">Glow Function</a>
+    </h2>
+
+<p>
+    The glow parameter will add an emissive color to make the tile glow.
+    The effect works well for lava and other things that should emit light.
+    <br>It can take a number from 0 to 1 or a color. 
+    <br>Examples: <code data-svelte-h="svelte-1a7ct2">glow(1), glow(red)</code>
+</p>
+<p data-svelte-h="svelte-16dukse">
+    If one of the tile&#39;s textures has glow configured, the texture settings will take priority.
+</p>
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="normal" data-radius="5">
+            
+            
+            
+    A second parameter can be provided to control the intensity of the premium glow effect.
+    <br>Examples: <code data-svelte-h="svelte-1i6hon7">glow(1,0), glow(red,1)</code>
+
+        </div>
+    </div>
+
+
+
+
+<h2 id="alpha" class="svelte-ahxbmh">
+        <a href="#alpha" class="svelte-ahxbmh">Alpha Function</a>
+    </h2>
+
+<p>
+    The alpha parameter can be used to make the tile partially transparent. Or, you can set alpha to 1 to turn on alpha blending.
+    <br>Examples: <code data-svelte-h="svelte-qktyga">alpha(0.5), alpha(1)</code>
+</p>
+<p data-svelte-h="svelte-u7roxb">
+    If one of the tile&#39;s textures has alpha configured, the texture settings will take priority.
+</p>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+    
+<h2 id="highlight" class="svelte-ahxbmh">
+        <a href="#highlight" class="svelte-ahxbmh">Highlight Function</a>
+    </h2>
+
+    <p>
+        Sets the highlight color for the tile. Set this to black to disable.
+        <br> To change other highlight settings, use the <a href="plugin-commands/#set">Set Command</a>.
+    </p>
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">highlight(<samp data-svelte-h="svelte-168vm1j">color</samp>)</code></pre>
+
+        </div>
+    </div>
+
+
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+
+
+<h2 id="model" class="svelte-ahxbmh">
+        <a href="#model" class="svelte-ahxbmh">Model Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-1j5osw9">Imports a 3D model for the tile.</p>
+<p>For more information about importing 3D models into MZ3D, see <a href="modeling#model-import">Importing Models</a>.</p>
+
+
+<h2 id="mesh" class="svelte-ahxbmh">
+        <a href="#mesh" class="svelte-ahxbmh">Mesh Function</a>
+    </h2>
+
+<p data-svelte-h="svelte-1px76el">Constructs a mesh for the tile based on a mesh string.</p>
+<p>For more information about mesh strings, see <a href="modeling#mesh">Mesh Building</a></p>
+
+<p>When using model or mesh, you should use the <a href="event-config#scale">Scale Function</a> to set the size instead of <a href="#width" data-svelte-h="svelte-uffdsb">width</a> and <a href="#height" data-svelte-h="svelte-8tiic7">height</a>.</p>
+
+        </div>
+    </div>
+							
+					
+    
+	</div>
+	<div style="clear:both"></div>
+</div>
+    <div class="svelte-dnrh9p">
+    
+        
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+            
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d-rewrite" class="svelte-1q6ixhq">
+        MZ3D-Rewrite
+    </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+    
+    <ul>
+        <li><a href="/docs/mz3d-rewrite/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d-rewrite/map-texture">Map Texture</a></li><li><a href="/docs/mz3d-rewrite/vertex-offsets">Vertex Offsets</a></li><li><a href="/docs/mz3d-rewrite/lut">LUT Textures</a></li><li><a href="/docs/mz3d-rewrite/connected-maps">Connected Maps</a></li>
+    </ul>
+
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mv3d" class="svelte-1q6ixhq">
+            MV3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mv3d/#getting-started">Getting Started</a></li><li><a href="/docs/mv3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mv3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mv3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mv3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mv3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d" class="svelte-1q6ixhq">
+            MZ3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mz3d/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mz3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mz3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mz3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mz3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+        
+	</div>
+	<div style="clear:both"></div>
+</div>
+    
+</div>
+
+</div>
+			
+
+    </div>
+    <footer>
+    <nav class="social-links">
+        <a href="https://patreon.com/cutievirus" target="_blank"><span style="--size:16px">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" xml:space="preserve" role="img" class="patreon svelte-1v1lddd" data-radius="1"><path d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2
+	C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33
+	c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.itch.io" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.37069 220.73612" role="img" class="itchio svelte-1v1lddd" data-radius="1"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" color="currentColor" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://ella.cutievirus.com" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" role="img" class="bluesky svelte-1v1lddd" data-radius="1"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.com/discord" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.644 96" role="img" class="discord svelte-1v1lddd" data-radius="1"><path d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z" fill="currentColor"></path></svg>
+</span></a>
+    </nav>
+    
+    
+    
+</footer>
+</div>
+	
+
+
+			
+			<script>
+				{
+					__sveltekit_19s9rsq = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null,{"type":"data","data":{category:"MZ3D",pluginName:"mz3d",PluginName:"MZ3D",premium:"?"},"uses":{"params":["vz"]}},null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BZbYkm9g.js"),
+						import("../../_app/immutable/entry/app.D23NuegA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 3, 4, 14],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

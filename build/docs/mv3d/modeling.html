@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../styles/main.css" />
+		<link rel="stylesheet" href="../../styles/fonts.css" />
+		
+		<link href="../../_app/immutable/assets/Layout.BWl0NnMt.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/MessageWindow.BcOnnu-s.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Img.ByoMCUil.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/ColumnLayout.rhr6OBw4.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/DocNav.BkWSd5u3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Anchor.KM62CLi2.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Code.TKo9a_QB.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Version.D9rgK15K.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BZbYkm9g.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CC_KAKoS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.BjkBv5nx.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.D23NuegA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.BT_eMuJg.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.z4QLvHIx.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.BhrrHbMI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Layout.Cc-7wxlH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Img.CZ6ZAp8Z.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/3.DsX3p4mc.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ColumnLayout.CZ3t2REy.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DocNav.D3EDvnwi.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Link.DpGiBmhP.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/4.CgM8L59W.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/5.BXctJfOm.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/12.DCqc0c8o.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Anchor.DPTg1Ks6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Code.UvG0J7Qo.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PageTitle.DTA_6V-l.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.hyYBTNij.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Version.52FMOf3v.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ParameterList.CApmv983.js"><title>Modeling - MV3D</title><!-- HEAD_svelte-ls0w6q_START --><link rel="icon" href="/favicon.png"><!-- HEAD_svelte-ls0w6q_END --><!-- HEAD_svelte-8zs03i_START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- HEAD_svelte-8zs03i_END --><!-- HEAD_svelte-pm843m_START --><!-- HEAD_svelte-pm843m_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+
+		
+
+
+
+
+<div class="main-layout" data-theme="Electra">
+    <header>
+	<nav class="svelte-yz8s3k">
+		<a href="/" class="svelte-yz8s3k">
+            
+            <img src="/logo128.png" alt="" width="16px" height="16px" class=" svelte-wp4vif" style="--width:16px;--height:16px;undefined" naturalWidth="0" naturalHeight="0">
+            Cutievirus
+        </a>
+		
+		<a href="/docs" class="svelte-yz8s3k" data-svelte-h="svelte-12oadd4">Documentation</a>
+	</nav>
+</header>
+    <div class="container">
+        
+    
+				<div class="svelte-mayw9m">
+    
+    
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+        
+						
+								
+
+
+<h1 class="svelte-ahxbmh">
+        Modeling - MV3D
+    </h1>
+
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+        <p data-svelte-h="svelte-15oafft">
+            The features on this page are only available in the premium version of the plugin.
+        </p>
+    
+        </div>
+    </div>
+
+
+<h2 id="model-import" class="svelte-ahxbmh">
+        <a href="#model-import" class="svelte-ahxbmh">Importing Models</a>
+    </h2>
+
+<p data-svelte-h="svelte-1tvsole">
+    Importing 3D models is done using the &quot;Model&quot; configuration function.
+    Models will be loaded from the models/ folder. Supported formats are .obj, .gltf, and .glb.
+</p>
+Parameters:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">filename|instance|flip||actions,bones,textures|projectionfix</code></pre>
+<p data-svelte-h="svelte-h62948">
+    When providing the file name, remember to include the file extension.
+</p>
+<p>
+    The 
+<b id="model-instance" class="svelte-ahxbmh">
+        <a href="#model-instance" class="svelte-ahxbmh">instance</a>
+    </b>
+ parameter controls whether or not to use <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/copies/instances" data-svelte-h="svelte-12mdtwx">instancing</a> (a more efficient way to render multiple copies of the same model).
+    <br> Values are <code data-svelte-h="svelte-1b4w2dk">true</code>, <code data-svelte-h="svelte-3d216r">false</code>, or <code data-svelte-h="svelte-ymy80h">clone</code> (to use <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/copies/clones" data-svelte-h="svelte-114e55">cloning</a> instead of instancing).
+    <br> The default optimization method is settable in the plugin parameters.
+</p>
+<p>
+    The 
+<b id="model-flip" class="svelte-ahxbmh">
+        <a href="#model-flip" class="svelte-ahxbmh">flip</a>
+    </b>
+ parameter can be used to flip the model&#39;s geometry. This parameter exists for backwards compatibility with models created for an older version of MV3D.
+</p>
+
+<p>
+    The 
+<b id="model-actions" class="svelte-ahxbmh">
+        <a href="#model-actions" class="svelte-ahxbmh">actions</a>
+    </b>
+ parameter modifies information about the model&#39;s animations. This parameter is a nested parameter list, so it should be wrapped in <code>{}</code>.
+    <br>You should provide a list of named arguments, with the name being the name of the action
+    and each argument being another nested parameter list with the following parameters:
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">alias,speed</code></pre>
+    Alias is a new name for the action. For example, if you change the name to &quot;walk&quot;, it will be used as the walking action.
+    <br>Speed can be used to speed the animation up or slow it down. The default speed is 1.
+    <br>Example: <code>model(char.glb,actions:{sprint:{alias:run,speed:1.4},stand:{alias:idle}})</code>
+</p>
+
+<p>
+    The 
+<b id="model-bones" class="svelte-ahxbmh">
+        <a href="#model-bones" class="svelte-ahxbmh">bones</a>
+    </b>
+ parameter is used to modify the model&#39;s bones. This parameter is a nested parameter list, so it should be wrapped in <code>{}</code>.
+    <br>You should provide a list of named arguments, with the name being the name of the bone
+    and each argument being another nested parameter list with the following parameters:
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">scale</code></pre>
+    Scale is the new scale for the bone.
+    <div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq  bug" data-mode="normal" data-radius="5" data-version="<=0.9.2">
+            <small class="version-number svelte-hnzqnq">v&lt;=0.9.2</small>
+            
+            Due to a bug this needs to be a non-zero value, but you can use a very small number like 0.001 instead.
+        </div>
+    </div>
+    Example: <code>model(char.glb,bones:{head:{scale:0.5}})</code>
+</p>
+
+<p>
+    The 
+<b id="model-textures" class="svelte-ahxbmh">
+        <a href="#model-textures" class="svelte-ahxbmh">textures</a>
+    </b>
+ parameter is used to replace the textures used in an imported model.
+    This parameter is a nested parameter list, so it should be wrapped in <code>{}</code>.
+    <br>Each argument is an additional nested parameter list with <a href="tile-config#textures">texture parameters</a>.
+    <br>If the model has multiple textures, you can provide a list of texture parameter lists.
+</p>
+Example:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">model(char.glb, textures:{ {./img/characters/Actor1.png,75%,50%,100%,100%} })</code></pre>
+
+<p>
+    The 
+<b id="model-projectionfix" class="svelte-ahxbmh">
+        <a href="#model-projectionfix" class="svelte-ahxbmh">projectionfix</a>
+    </b>
+ parameter sets whether the model&#39;s projection should be adjusted for the 2D <a href="plugin-commands#camera">camera mode</a>.
+    If true, the model will avoid being stretched vertically. Objects that are part of the environment should have <code data-svelte-h="svelte-fwfdnx">projectionfix:false</code> and characters should have <code data-svelte-h="svelte-w29fde">projectionfix:true</code>.
+</p>
+
+
+<h3 id=".obj" class="svelte-ahxbmh">
+        <a href="#.obj" class="svelte-ahxbmh">.obj</a>
+    </h3>
+
+<p data-svelte-h="svelte-e71uuo">
+    When using .obj format, there should also be a .mtl file which describes the model&#39;s materials.
+    <br>.obj and .mtl files are plain text, so you can open them in a text editor.
+</p>
+<p data-svelte-h="svelte-1e9mj51">
+    The &quot;mtllib&quot; line in the .obj file points to the location of the .mtl file.
+</p>
+<p data-svelte-h="svelte-16h7vhx">
+    The .mtl file will have lines that start with &quot;map_&quot; such as &quot;map_Kd&quot; and &quot;map_Bump&quot; which point to the texture files.
+</p>
+<p data-svelte-h="svelte-101vok3">
+    Ensure that all file paths are relative paths. You should have no paths that start with &quot;C:\&quot;,
+    or the model won&#39;t work when loaded on someone else&#39;s computer because the files will be in different locations.
+</p>
+<p data-svelte-h="svelte-gfnl5i">For example, to load a texture from an image in the tilesets folder: <code>map_Kd ../img/tilesets/Inside_C.png</code></p>
+<p data-svelte-h="svelte-1vjvwxs">
+    .obj models only support static meshes. If you need to animate the model, you should use .glb or .gltf format instead.
+</p>
+
+<h3 id=".glb" class="svelte-ahxbmh">
+        <a href="#.glb" class="svelte-ahxbmh">.glb</a>
+    </h3>
+
+<p data-svelte-h="svelte-1bri017">
+    .glb files are self-contained and contain the model, materials, and textures all in one file.
+    <br>They are the easiest to work with because there are no external files to worry about.
+</p>
+
+<h3 id=".gltf" class="svelte-ahxbmh">
+        <a href="#.gltf" class="svelte-ahxbmh">.gltf</a>
+    </h3>
+
+<p data-svelte-h="svelte-1821mfd">
+    .gltf files are the same format as .glb files, but stored as a text file instead of a binary file.
+    <br>Unlike glb, it&#39;s possible for a gltf file to reference external files, so you may need to include the textures and other files it references.
+    Again, you should also ensure that all file paths used in the .gltf file are relative paths.
+</p>
+<p>
+    .glb and .gltf files support animation. To run one of the model&#39;s animations, use the <a href="plugin-commands#action">Action Command</a>.
+</p>
+<p data-svelte-h="svelte-qf899p">Actions named &quot;idle&quot;, &quot;walk&quot;, &quot;run&quot;, &quot;jump&quot;, &quot;fall&quot;, &quot;swim&quot;, or &quot;swimmove&quot; will be used as default actions depending on the character state.</p>
+
+
+<h2 id="mesh" class="svelte-ahxbmh">
+        <a href="#mesh" class="svelte-ahxbmh">Mesh Building</a>
+    </h2>
+
+<p>
+    The &quot;Mesh&quot; configuration function is used to construct a mesh for the character based on a mesh string.
+    Mesh strings are a special format created specifically for MV3D that contain instructions for building a mesh.
+</p>
+
+<p data-svelte-h="svelte-1fdo8ye">
+    Using mesh strings might seem a bit more complicated than importing 3D models, but it allows you to define meshes directly in plain text (such as in a texture .json file).
+</p>
+
+<p data-svelte-h="svelte-iioyw1">
+    A mesh string is composed by a series of mesh parts, each of which is a letter (or series of letters) which determines what type of part it is, followed by a nested parameter list.
+</p>
+<p data-svelte-h="svelte-tt4swc">
+    The following mesh part types are available:
+</p>
+<dl><dt>
+<b id="mesh-part-c" class="svelte-ahxbmh">
+        <a href="#mesh-part-c" class="svelte-ahxbmh">c - cuboid</a>
+    </b>
+</dt><dd>
+        Defines a cuboid.
+        <br>Parameters: <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">xsize,ysize,zsize|xoff,yoff,zoff|yaw,pitch,roll|texture:top,bottom,south,east,north,west</code></pre>
+        Example (shelf mesh): <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mesh(c{1,.5,1.5|0,-.25,0||{+0,+-1,1,25px},{0},{+0,+-23px,1,71px},{B,7,11+22px,1,-70px}})</code></pre>
+    </dd><dt>
+<b id="mesh-part-q" class="svelte-ahxbmh">
+        <a href="#mesh-part-q" class="svelte-ahxbmh">q - quad</a>
+    </b>
+</dt><dd>
+        Defines a quad.
+        <br>Parameters: <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">xsize,ysize|xoff,yoff,zoff|yaw,pitch,roll|texture</code></pre>
+        Example (tree): <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mesh(
+qq{1,2|,,1|,90|{B,5,11,1,2}}
+qq{1,2|,,1|90,90|{B,5,11,1,2}}
+q{1,1|,,.75||{B,6,12}}
+q{.8,.8|,,1.25||{B,6,12}}
+)</code></pre>
+    </dd><dt>
+<b id="mesh-part-p" class="svelte-ahxbmh">
+        <a href="#mesh-part-p" class="svelte-ahxbmh">p - points</a>
+    </b>
+</dt><dd>
+        Defines a mesh using point data.
+        <br>Parameters: <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">positions...|indices...|uvs...|texture</code></pre>
+        Example:
+        <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mesh(p{0,0,0, 0,-1,.5, .866,.5,.5, -.866,.5,.5, 0,0,1|0,1,2, 0,3,1, 0,2,3, 4,3,2, 4,2,1, 4,1,3|.5,.5, .5,0, .75,.75, .25,.75, .5,.5|{A5,2,4}})</code></pre>
+        <p data-svelte-h="svelte-1ioz980">I have made a <a href="/blender/mv3d_mesh.py" download>Blender Add-On</a> for converting models into mesh strings of this type.</p>
+    </dd></dl>
+<p data-svelte-h="svelte-1fo24v3">
+    To make a double-sided shape, you can repeat the letter for the mesh part type twice (&quot;cc&quot;, &quot;qq&quot;, or &quot;pp&quot;).
+</p>
+<p data-svelte-h="svelte-cayp2o">
+    You can mix different part types in the same mesh string.
+</p>
+Example (chair):
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mesh(c{.75,.6,.25|0,-.075,0||{+0,+10px,48px,17px},{0},{+0,+27px,1,13px}}
+c{.125,.65,.125|-.3375,-.075,.25||{+0,+4px,7px,22px},{0},{+0,+26px,7px,5px},{+7px,+31px,34px,6px},{+0,+26px,7px,5px},{+7px,+31px,34px,6px}}
+c{.125,.65,.125|.3375,-.075,.25||{+41px,+4px,7px,22px},{0},{+41px,+26px,7px,5px},{+7px,+31px,34px,6px},{+41px,+26px,7px,5px},{+7px,+31px,34px,6px}}
+c{.125,.125,.875|-.3375,-.3375,.375||{+0,+-45px,7px,7px},{0},{+0,+-38px,7px,42px}}
+c{.125,.125,.875|.3375,-.3375,.375||{+41px,+-45px,7px,7px},{0},{+41px,+-38px,7px,42px}}
+qq{.55,1|0,-.3375,.75|0,90,0|{+7px,+-45px,34px,55px}}
+)</code></pre>
+							
+					
+    
+	</div>
+	<div style="clear:both"></div>
+</div>
+    <div class="svelte-dnrh9p">
+    
+        
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+            
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d-rewrite" class="svelte-1q6ixhq">
+        MZ3D-Rewrite
+    </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+    
+    <ul>
+        <li><a href="/docs/mz3d-rewrite/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d-rewrite/map-texture">Map Texture</a></li><li><a href="/docs/mz3d-rewrite/vertex-offsets">Vertex Offsets</a></li><li><a href="/docs/mz3d-rewrite/lut">LUT Textures</a></li><li><a href="/docs/mz3d-rewrite/connected-maps">Connected Maps</a></li>
+    </ul>
+
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mv3d" class="svelte-1q6ixhq">
+            MV3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mv3d/#getting-started">Getting Started</a></li><li><a href="/docs/mv3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mv3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mv3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mv3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mv3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d" class="svelte-1q6ixhq">
+            MZ3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mz3d/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mz3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mz3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mz3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mz3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+        
+	</div>
+	<div style="clear:both"></div>
+</div>
+    
+</div>
+
+</div>
+			
+
+    </div>
+    <footer>
+    <nav class="social-links">
+        <a href="https://patreon.com/cutievirus" target="_blank"><span style="--size:16px">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" xml:space="preserve" role="img" class="patreon svelte-1v1lddd" data-radius="1"><path d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2
+	C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33
+	c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.itch.io" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.37069 220.73612" role="img" class="itchio svelte-1v1lddd" data-radius="1"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" color="currentColor" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://ella.cutievirus.com" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" role="img" class="bluesky svelte-1v1lddd" data-radius="1"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.com/discord" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.644 96" role="img" class="discord svelte-1v1lddd" data-radius="1"><path d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z" fill="currentColor"></path></svg>
+</span></a>
+    </nav>
+    
+    
+    
+</footer>
+</div>
+	
+
+
+			
+			<script>
+				{
+					__sveltekit_19s9rsq = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null,{"type":"data","data":{category:"MV3D",pluginName:"mv3d",PluginName:"MV3D",premium:"?"},"uses":{"params":["vz"]}},null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BZbYkm9g.js"),
+						import("../../_app/immutable/entry/app.D23NuegA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 3, 4, 12],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "PixelMplus10";
+    src: local(Consolas);
+    size-adjust: 90%;
+}
+@font-face {
+    font-family: "PixelMplus12";
+    src: local(Consolas);
+    size-adjust: 90%;
+}
+
+
+@font-face{
+    font-family: "PixelMplus12";
+    src:url("/font/unifont_jp.otf") format("opentype");
+    size-adjust: 133.3333333333333%;
+    font-display: swap;
+}
+@font-face{
+    font-family: "PixelMplus12";
+    src:url("/font/unifont_upper.otf") format("opentype");
+    size-adjust: 133.3333333333333%;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "PixelMplus10";
+    src:url("/font/unifont_jp.otf") format("opentype");
+    size-adjust: 160%;
+    font-display: swap;
+}
+@font-face{
+    font-family: "PixelMplus10";
+    src:url("/font/unifont_upper.otf") format("opentype");
+    size-adjust: 160%;
+    font-display: swap;
+}
+
+
+@font-face{
+    font-family: "PixelMplus10";
+    font-weight: 400;
+    src:url("/font/PixelMplus10-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: "PixelMplus12";
+    font-weight: 400;
+    src:url("/font/PixelMplus12-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "PixelMplus12";
+    font-weight: 700;
+    src:url("/font/PixelMplus12-Bold.ttf") format("truetype");
+    font-display: swap;
+}

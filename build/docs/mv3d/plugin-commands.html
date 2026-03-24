@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../styles/main.css" />
+		<link rel="stylesheet" href="../../styles/fonts.css" />
+		
+		<link href="../../_app/immutable/assets/Layout.BWl0NnMt.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/MessageWindow.BcOnnu-s.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Img.ByoMCUil.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/ColumnLayout.rhr6OBw4.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/DocNav.BkWSd5u3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Anchor.KM62CLi2.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Code.TKo9a_QB.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Version.D9rgK15K.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BZbYkm9g.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CC_KAKoS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.BjkBv5nx.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.D23NuegA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.BT_eMuJg.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.z4QLvHIx.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.BhrrHbMI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Layout.Cc-7wxlH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Img.CZ6ZAp8Z.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/3.DsX3p4mc.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ColumnLayout.CZ3t2REy.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DocNav.D3EDvnwi.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Link.DpGiBmhP.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/4.CgM8L59W.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/5.BXctJfOm.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/13.CZB-QfRH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Anchor.DPTg1Ks6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Code.UvG0J7Qo.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PageTitle.DTA_6V-l.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.hyYBTNij.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Version.52FMOf3v.js"><title>Plugin Commands - MV3D</title><!-- HEAD_svelte-ls0w6q_START --><link rel="icon" href="/favicon.png"><!-- HEAD_svelte-ls0w6q_END --><!-- HEAD_svelte-8zs03i_START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- HEAD_svelte-8zs03i_END --><!-- HEAD_svelte-pm843m_START --><!-- HEAD_svelte-pm843m_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+
+		
+
+
+
+
+<div class="main-layout" data-theme="Electra">
+    <header>
+	<nav class="svelte-yz8s3k">
+		<a href="/" class="svelte-yz8s3k">
+            
+            <img src="/logo128.png" alt="" width="16px" height="16px" class=" svelte-wp4vif" style="--width:16px;--height:16px;undefined" naturalWidth="0" naturalHeight="0">
+            Cutievirus
+        </a>
+		
+		<a href="/docs" class="svelte-yz8s3k" data-svelte-h="svelte-12oadd4">Documentation</a>
+	</nav>
+</header>
+    <div class="container">
+        
+    
+				<div class="svelte-mayw9m">
+    
+    
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+        
+						
+								
+
+
+<h1 class="svelte-ahxbmh">
+        Plugin Commands - MV3D
+    </h1>
+
+
+    
+
+<p>Some commands (like lamp and flashlight) act on a character. By default the target character will be the current event. You can define your own target by providing a target string. A target string is the &quot;@&quot; character followed by an identifier.
+    The target string should be placed directly after the &quot;mv3d&quot; prefix as the second word in the command.
+</p>
+Example:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d @target rest of the command</code></pre>
+<p data-svelte-h="svelte-desj0i">Valid targets:</p>
+<ul data-svelte-h="svelte-y1gmy3">
+    <li>@p or @player - targets $gamePlayer</li>
+    <li>@e0, @s, or target string omitted - targets the current event</li>
+    <li>@e1, @e2, @e3, @e25 etc - targets event with specified id</li>
+    <li>@f0, @f1, @f2 - targets first, second, third follower, etc.</li>
+    <li>@v0, @v1, @v2 - targets boat, ship, airship</li>
+</ul>
+
+
+<p data-svelte-h="svelte-wm7q7v">
+    Many commands can take a time parameter at the end. The time parameter is in seconds. If omitted, the time parameter defaults to 1 second.
+</p>
+
+<p data-svelte-h="svelte-ibg6us">
+    Some numeric parameters can be prefixed with + to be set relative to the current value.
+</p>
+Example:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d camera yaw +45</code></pre>
+
+
+<h2 id="camera" class="svelte-ahxbmh">
+        <a href="#camera" class="svelte-ahxbmh">Camera Commands</a>
+    </h2>
+
+
+<p data-svelte-h="svelte-cccd7m">
+    The Camera Pitch, Yaw, and Roll commands rotate the camera around the camera target.
+    <br>The Camera Dist command sets the distance from the camera target.
+    <br>The Camera Height command sets a height offset from the camera target.
+    <br>The Camera Zoom command alters the FOV to zoom in or out.
+    <br>The Camera Pan command offsets the x and y position from the camera target.
+</p>
+
+<p data-svelte-h="svelte-1pk8hi9">
+    The following camera commands can have the word &quot;camera&quot; omitted and still work as a command.
+</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> pitch <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> yaw <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> roll <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> dist <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> height <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> zoom <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <span title="optional word" data-svelte-h="svelte-133tnn0">camera</span> pan <samp title="number" data-svelte-h="svelte-p3ccxq">x</samp> <samp title="number" data-svelte-h="svelte-eyvwfd">y</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+<p data-svelte-h="svelte-o0hb91">
+    The Camera Target command sets the camera target to a character. The camera will move with the camera target.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d camera target <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+
+<p data-svelte-h="svelte-1rf2jx2">
+    The Camera Track command sets the camera to track a character, automatically rotating the camera to face the character.
+    Typically you will want to use this in conjunction with the Camera Target command to move the camera away from the player, then track the player.
+    <br>There are additional &quot;Track Pitch&quot; and &quot;Track Yaw&quot; commands which track only the pitch and yaw respectively.
+</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d camera track <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d camera track pitch <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d camera track yaw <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d camera track off</code></pre>
+
+<p data-svelte-h="svelte-w64j1e">
+    The Camera Mode command sets the camera mode between perspective, orthographic, and 2D. Only the first letter is required, so &quot;p&quot;, &quot;o&quot;, and &quot;2&quot; are possible values.
+    (2D mode is a false 2D projection, and is different from <a href="#disable">disabling the 3D rendering</a>.)
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d camera mode <samp title="PERSPECTIVE or ORTHOGRAPHIC or 2D" data-svelte-h="svelte-1osurfq">p/o/2d</samp></code></pre>
+
+
+<h2 id="light" class="svelte-ahxbmh">
+        <a href="#light" class="svelte-ahxbmh">Light Commands</a>
+    </h2>
+
+
+<p>
+    The Light command (and its alias the Ambient command) sets the ambient light color.
+When combined with a sunlight source, the ambient light will appear to be the color in shadowed areas.
+</p>
+
+<p data-svelte-h="svelte-2x2t8q">The color parameter can be a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color">hex color</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">named color</a>, or any other valid <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">css color</a>.</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d light <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d ambient <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+<p data-svelte-h="svelte-1wyewdv">The Lamp commands set up a point light on the target event and changes properties of that light.</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> lamp color <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> lamp intensity <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> lamp dist <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> lamp <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="number" data-svelte-h="svelte-103h9bj">intensity</samp> <samp title="number" data-svelte-h="svelte-15cdrwg">dist</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+<p data-svelte-h="svelte-1gd1k4j">
+    The Flashlight commands set up a spot light on the target event and changes properties of that light.
+    In addition to the same properties as the lamp, the flashlight has angle, pitch, and yaw properties.
+    Angle is the angle of the light cone in degrees, and pitch and yaw are the direction the light is pointing.
+</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight color <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight intensity <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight dist <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight angle <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight pitch <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight yaw <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> flashlight <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="number" data-svelte-h="svelte-103h9bj">intensity</samp> <samp title="number" data-svelte-h="svelte-15cdrwg">dist</samp> <samp title="number" data-svelte-h="svelte-jlbei9">angle</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+    <p data-svelte-h="svelte-ncm4ei">
+        The Sun commands set up a directional light to act as a sunlight source and changes properties of that light. The sun will create dynamic shadows.
+    </p>
+    
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d sun color <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d sun yaw <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d sun pitch <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d sun angle <samp title="number" data-svelte-h="svelte-z540cx">yaw</samp> <samp title="number" data-svelte-h="svelte-1o30zjk">pitch</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+    
+
+        </div>
+    </div>
+
+
+<h2 id="animation" class="svelte-ahxbmh">
+        <a href="#animation" class="svelte-ahxbmh">Animation Command</a>
+    </h2>
+
+
+<p data-svelte-h="svelte-19ryghp">
+    The Animation command plays an animation at the target event.
+</p>
+
+<p>
+    Additional parameters can also be provided at the end of the command.
+</p>
+<ul>
+    <li data-svelte-h="svelte-cwvqa7">Depth controls whether the animation should have depth enabled. If false, animations are drawn over everything else.</li>
+    <li data-svelte-h="svelte-1dx83yp">Scale is a scaling factor for the animation.</li>
+    
+</ul>
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> animation <samp title="number" data-svelte-h="svelte-19gu8vr">id</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> animation <samp title="number" data-svelte-h="svelte-19gu8vr">id</samp> depth <samp data-svelte-h="svelte-17yyxv0">true/false</samp> scale <samp title="number" data-svelte-h="svelte-11z14xk">n</samp></code></pre>
+
+
+<h2 id="fog" class="svelte-ahxbmh">
+        <a href="#fog" class="svelte-ahxbmh">Fog Command</a>
+    </h2>
+
+<p>
+    The fog command changes the fog color and density for the map.
+    It has a near distance and a far distance, which are the distances from the camera where the fog starts and ends.
+    To control the alpha fog, see the <a href="#set" data-svelte-h="svelte-e8u5ae">Set Command</a>.
+</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d fog color <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d fog near <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d fog far <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d fog dist <samp title="number" data-svelte-h="svelte-5hdkt6">near</samp> <samp title="number" data-svelte-h="svelte-1mgb5yz">far</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d fog <samp data-svelte-h="svelte-168vm1j">color</samp> <samp title="number" data-svelte-h="svelte-5hdkt6">near</samp> <samp title="number" data-svelte-h="svelte-1mgb5yz">far</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+
+<h2 id="resolution-scale" class="svelte-ahxbmh">
+        <a href="#resolution-scale" class="svelte-ahxbmh">Resolution Scale Command</a>
+    </h2>
+
+<p data-svelte-h="svelte-jvpabw">
+    The Resolution Scale command changes the size of the 3D canvas relative to the game canvas. This can be used to create a pixellated effect. The scale should be between 0 and 1.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d resolution scale <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+
+<h2 id="configure" class="svelte-ahxbmh">
+        <a href="#configure" class="svelte-ahxbmh">Configure Command</a>
+    </h2>
+
+<p>
+    The configure command can change the configurations of a character. You should provide a list of configuration functions as the parameter.
+    For more information the configuration functions you can use, see <a href="event-config">Event Configuration Functions</a>.
+</p>
+
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> configure <samp title="list of configuration functions" data-svelte-h="svelte-tv9uzu">functions</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+
+<h2 id="skybox&amp;skyball" class="svelte-ahxbmh">
+        <a href="#skybox&amp;skyball" class="svelte-ahxbmh">Skybox and Skyball Commands</a>
+    </h2>
+
+
+<h3 id="skybox" class="svelte-ahxbmh">
+        <a href="#skybox" class="svelte-ahxbmh">Skybox Command</a>
+    </h3>
+
+<p data-svelte-h="svelte-1g16wg1">
+    The Skybox command will set up a cube-shaped mesh to represent the sky. The skybox takes six textures, one for each face.
+</p>
+<p data-svelte-h="svelte-4492k">
+    A layer parameter can be provided after to set up multiple skyboxes. The layer parameter is always optional and defaults to 0.
+    Higher layers will be drawn over lower layers.
+</p>
+<p data-svelte-h="svelte-1w9n3ff">
+    The time parameter will fade the skybox in or out, but cannot fade between different textures. To fade between textures you need to use multiple skybox layers.
+</p>
+<p data-svelte-h="svelte-eo8jvt">
+    If an image is provided without a side name, it will be used as the default image and will be used for any sides without an image.
+    <br>Texutres are pulled from the img/parallaxes folder.
+    <br>The word &quot;clear&quot; can be used to mean a blank texture.
+</p>
+<p data-svelte-h="svelte-tlpivx">
+    The autorotate parameters can be used to make the skybox rotate automatically.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie"><span title="clear all skyboxes">mv3d skybox clear</span>
+<span title="clear skybox on specified layer">mv3d skybox clear <samp data-svelte-h="svelte-1xi0d59">layer</samp></span>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> alpha <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> <samp data-svelte-h="svelte-1ictklr">img</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> <samp data-svelte-h="svelte-1ictklr">img</samp> top <samp data-svelte-h="svelte-1ictklr">img</samp> bottom <samp data-svelte-h="svelte-1ictklr">img</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> north <samp data-svelte-h="svelte-1ictklr">img</samp> south <samp data-svelte-h="svelte-1ictklr">img</samp> east <samp data-svelte-h="svelte-1ictklr">img</samp> west <samp data-svelte-h="svelte-1ictklr">img</samp> top <samp data-svelte-h="svelte-1ictklr">img</samp> bottom <samp data-svelte-h="svelte-1ictklr">img</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> autorotate yaw <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> autorotate pitch <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> autorotate roll <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skybox <samp title="optional (default 0) skybox layer" data-svelte-h="svelte-tpduj3">layer</samp> autorotate <samp title="number" data-svelte-h="svelte-z540cx">yaw</samp> <samp title="number" data-svelte-h="svelte-1o30zjk">pitch</samp> <samp title="number" data-svelte-h="svelte-14d26p9">roll</samp></code></pre>
+
+
+<h3 id="skyball" class="svelte-ahxbmh">
+        <a href="#skyball" class="svelte-ahxbmh">Skyball Command</a>
+    </h3>
+
+<p data-svelte-h="svelte-93nfgk">
+    The Skyball command will set up a sphere-shaped mesh to represent the sky. The skyball takes only one texture which is wrapped around the sphere.
+    <br>Like skyboxes, skyballs can also be layered. Skyballs are always drawn in front of skyboxes.
+    <br>Also like skyboxes, skyballs can be automatically rotated with the autorotate parameters.
+</p>
+<p data-svelte-h="svelte-1izf0ar">
+    Skyballs have an additional &quot;repeat&quot; parameter which can make the texture repeat a certain number of times around the sphere.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie"><span title="clear all skyballs">mv3d skyball clear</span>
+<span title="clear skyball on specified layer">mv3d skyball clear <samp data-svelte-h="svelte-1xi0d59">layer</samp></span>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> alpha <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> <samp data-svelte-h="svelte-1ictklr">img</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> <samp data-svelte-h="svelte-1ictklr">img</samp> repeat <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> autorotate yaw <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> autorotate pitch <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> autorotate roll <samp title="number" data-svelte-h="svelte-11z14xk">n</samp>
+mv3d skyball <samp title="optional (default 0) skyball layer" data-svelte-h="svelte-wxxorr">layer</samp> <samp data-svelte-h="svelte-1ictklr">img</samp> repeat <samp title="number" data-svelte-h="svelte-11z14xk">n</samp> autorotate <samp title="number" data-svelte-h="svelte-z540cx">yaw</samp> <samp title="number" data-svelte-h="svelte-1o30zjk">pitch</samp> <samp title="number" data-svelte-h="svelte-14d26p9">roll</samp> <samp title="time" data-svelte-h="svelte-n2z30q">t</samp></code></pre>
+
+
+        </div>
+    </div><div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+
+<h2 id="action" class="svelte-ahxbmh">
+        <a href="#action" class="svelte-ahxbmh">Action Command</a>
+    </h2>
+
+<p data-svelte-h="svelte-138s267">
+    The Action command plays or stops an action (animation) on the target character with an imported gltf model.
+    <br>The wait, loop, and important keywords can be provided at the end of the command to modify the behavior.
+</p>
+<ul data-svelte-h="svelte-114sln6">
+    <li>Loop will cause the action to loop.</li>
+    <li>Important will prevent the action from being interrupted by changing state.</li>
+    <li>Wait will cause the interpreter to wait until the action is finished before continuing.</li>
+</ul>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action play <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp>
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action play <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp> wait
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action play <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp> loop
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action play <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp> important
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action play <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp> loop important
+mv3d <samp title="target string" data-svelte-h="svelte-vygyen">@t</samp> action stop <samp title="action name" data-svelte-h="svelte-eu41wn">name</samp></code></pre>
+
+
+        </div>
+    </div>
+
+
+
+<h2 id="set" class="svelte-ahxbmh">
+        <a href="#set" class="svelte-ahxbmh">Set Command</a>
+    </h2>
+
+<p data-svelte-h="svelte-1xdtofa">Changes a setting. Some of the settings changeable using this command also appear in the plugin parameters. For those settings, the same syntax is used as in the plugin parameters.</p>
+<p data-svelte-h="svelte-1jy56p0">Settings changed with this command are saved in the save file.</p>
+    
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d set <samp data-svelte-h="svelte-17zv5fa">setting</samp> <samp data-svelte-h="svelte-8e37ox">value</samp></code></pre>
+
+<p data-svelte-h="svelte-rutver">Valid Settings:</p>
+<dl><dt data-svelte-h="svelte-1ilamju">lockCamera</dt><dd data-svelte-h="svelte-dml8n2">Locks the camera in place. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-fy2pyf">allowRotation</dt><dd data-svelte-h="svelte-xt5rd3">Allows the camera to rotate side to side. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-pss6zv">allowPitch</dt><dd data-svelte-h="svelte-n6iirn">Allows the camera to pitch up and down. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-u2n78g">diagonalMovement</dt><dd data-svelte-h="svelte-16wrx3u">Changes the way diagonal movement works. Can be <samp>Off</samp>, <samp>Diagonal Basic</samp>, <samp>Diagonal Basic 3D</samp>, <samp>Diagonal Smart</samp>, or <samp>Diagonal Smart 3D</samp>
+    <br>3D modes mean diagonal movement only allowed when 3D mode is enabled.</dd><dt data-svelte-h="svelte-115dma2">turnIncrement</dt><dd data-svelte-h="svelte-eeu2x1">How many degrees the camera turns when turning. <samp>0</samp> to <samp>360</samp></dd><dt data-svelte-h="svelte-v6ojo0">turnSpeed</dt><dd data-svelte-h="svelte-vm66pb">How fast the camera turns in degrees per second.</dd><dt data-svelte-h="svelte-1wgzutm">instantMovement</dt><dd>When true, the player moves instantly to the new position. <samp data-svelte-h="svelte-w3oc00">true</samp> or <samp data-svelte-h="svelte-yrx02b">false</samp>
+        <span class="drop-shadow svelte-hnzqnq">
+        <span class="v svelte-hnzqnq  bug  small" data-mode="inline" data-radius="5">
+            
+            
+            Doesn&#39;t work propertly with 3D models
+        </span>
+    </span>
+    </dd><dt data-svelte-h="svelte-15vsl48">inputCameraMouse</dt><dd data-svelte-h="svelte-kxsakr">When true, the camera can be controlled with the mouse. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-zc8c4w">inputCameraGamepad</dt><dd data-svelte-h="svelte-yx9mef">When true, the camera can be controlled with a gamepad. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-1nqsaqd">cameraCollision</dt><dd data-svelte-h="svelte-11sxzid">Allows the camera to collide with objects. Can be <samp>Off</samp>, <samp>Type1</samp>, <samp>Type2</samp>, <samp>Type1 Smoothed</samp>, or <samp>Type2 Smoothed</samp>
+    <br>Type2 allows objects to be between the camera and player, Type1 does not. Smoothed will smooth the camera position when colliding.</dd><dt data-svelte-h="svelte-1r4z69">airshipHeight</dt><dd data-svelte-h="svelte-77tmnd">How high the airship flies.
+
+    </dd><dt data-svelte-h="svelte-1gcl63k">allowGlide</dt><dd data-svelte-h="svelte-mkn3yc">If true, collision detection for flying characters will only use the current elevation and not target elevation. <samp>true</samp> or <samp>false</samp></dd><dt data-svelte-h="svelte-pxjtjx">animationDepth</dt><dd data-svelte-h="svelte-1sauxoo">Whether animations should have depth enabled. If false, animations are drawn over everything else. <samp>true</samp> or <samp>false</samp></dd></dl>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq premium" data-mode="block" data-radius="5">
+            
+            <br>
+            
+<dl data-svelte-h="svelte-s155oh"><dt>alphaFog</dt><dd>Blends the 3D environment into the parallax background with an alpha fog effect. <samp>0</samp> to disable, <samp>1</samp> for full effect.</dd><dt>glowIntensity</dt><dd>Intensity of the glow effect. <samp>0</samp> or higher</dd><dt>glowRadius</dt><dd>Radius of the glow effect. <samp>0</samp> or higher</dd><dt>glowThroughWalls</dt><dd>When true, the glow effect will be visible through walls. <samp>true</samp> or <samp>false</samp></dd><dt>highlight</dt><dd>Controls the mode for the highlight effect. Can be <samp>Off</samp>, <samp>Inner</samp>, <samp>Outer</samp>, or <samp>On</samp></dd><dt>highlightRadius</dt><dd>Radius of the highlight effect. <samp>0</samp> or higher</dd><dt>highlightThroughWalls</dt><dd>When true, the highlight effect will be visible through walls. <samp>true</samp> or <samp>false</samp></dd><dt>chromaticAberration</dt><dd>Intensity of the chromatic aberration effect. <samp>0</samp> or higher</dd><dt>chromaticAberrationAngle</dt><dd>Angle of the chromatic aberration effect. <samp>0</samp> to <samp>360</samp></dd><dt>aperture</dt><dd>Larger values cause more blur away from the focus distance.</dd><dt>blurStrength</dt><dd>Strength of the blur effect. <samp>0</samp> or higher</dd><dt>focusDistance</dt><dd>Distance at which the camera is focused. <samp>center</samp> focuses on the center of the screen. <samp>mouse</samp> focuses on the mouse position. <samp>auto</samp> will set focus to camera distance, or center of screen if in 1st person. Using a number will fix the focus distance at that value.</dd><dt>bloom</dt><dd>Intensity of the bloom effect. <samp>0</samp> or higher</dd><dt>bloomThreshold</dt><dd>Threshold for the bloom effect. <samp>0</samp> to <samp>1</samp></dd><dt>bloomRadius</dt><dd>Radius of the bloom effect. <samp>0</samp> or higher</dd></dl>
+
+        </div>
+    </div>
+
+
+    
+        <div id="disable">
+                
+<h2 id="enable" class="svelte-ahxbmh">
+        <a href="#enable" class="svelte-ahxbmh">Enable / Disable Command</a>
+    </h2>
+
+            </div>
+    
+
+<p data-svelte-h="svelte-1emkn63">
+    The Enable and Disable commands enable or disable the 3D rendering.
+    When disabled, the 3D rendering will be hidden and the game will behave as if the plugin is not installed.
+</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d enable
+mv3d disable</code></pre>
+
+<div class="drop-shadow svelte-hnzqnq">
+        <div class="v svelte-hnzqnq  bug" data-mode="block" data-radius="5" data-version="<=0.9">
+            <small class="version-number svelte-hnzqnq">v&lt;=0.9</small>
+            <br>
+            
+    <p data-svelte-h="svelte-1f6ybq">It was intended that you be able to provide a fade type with the enable or disable command, but this isn&#39;t working due to a bug.</p>
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d enable 0
+mv3d disable 1</code></pre>
+    <p data-svelte-h="svelte-1vauc6j">Instead, you can use a script call to accomplish the same thing.</p>
+    <pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">mv3d.enable(0);<br>mv3d.disable(1);</code></pre>
+    <p data-svelte-h="svelte-jymit8">Fade mode 0 is fade to black and fade mode 1 is fade to white.</p>
+
+        </div>
+    </div>
+
+
+<h2 id="script" class="svelte-ahxbmh">
+        <a href="#script" class="svelte-ahxbmh">Script Call</a>
+    </h2>
+
+
+<p>
+    To run a plugin command using javascript, you can use <code>mv3d.command</code>.
+    You should leave out the &quot;mv3d&quot; prefix when running commands this way.
+    You can pass the parameters as separate arguments into the function as well.
+</p>
+Example:
+<pre class="svelte-1ny38ie"><code data-radius="1" class="svelte-1ny38ie">var id=1, depth=true, scale=1;
+mv3d.command(&quot;@p animation&quot;, id, &quot;depth&quot;, depth, &quot;scale&quot;, scale);</code></pre>
+							
+					
+    
+	</div>
+	<div style="clear:both"></div>
+</div>
+    <div class="svelte-dnrh9p">
+    
+        
+<div class="message-window svelte-uhc7tq" style="--message-window-bg: hsl(240, 30%, 30%); --message-window-hue: 220deg; --message-window-small-color: hsl(240, 30%, 65%); --message-window-bg-attach: initial;">
+	<div class="message-window-content svelte-uhc7tq">
+		
+            
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d-rewrite" class="svelte-1q6ixhq">
+        MZ3D-Rewrite
+    </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+    
+    <ul>
+        <li><a href="/docs/mz3d-rewrite/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d-rewrite/map-texture">Map Texture</a></li><li><a href="/docs/mz3d-rewrite/vertex-offsets">Vertex Offsets</a></li><li><a href="/docs/mz3d-rewrite/lut">LUT Textures</a></li><li><a href="/docs/mz3d-rewrite/connected-maps">Connected Maps</a></li>
+    </ul>
+
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mv3d" class="svelte-1q6ixhq">
+            MV3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mv3d/#getting-started">Getting Started</a></li><li><a href="/docs/mv3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mv3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mv3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mv3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mv3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+
+
+
+<details open class="svelte-1q6ixhq isOpen">
+    <summary id="mz3d" class="svelte-1q6ixhq">
+            MZ3D
+        </summary>
+    
+    <div class="svelte-1q6ixhq">
+        
+        
+        <ul>
+            <li><a href="/docs/mz3d/#getting-started">Getting Started</a></li><li><a href="/docs/mz3d/plugin-commands">Plugin Commands</a></li><li><a href="/docs/mz3d/tile-config">Tile Configuration Functions</a></li><li><a href="/docs/mz3d/event-config">Event Configuration Functions</a></li><li><a href="/docs/mz3d/map-config">Map Configuration Functions</a></li><li><a href="/docs/mz3d/modeling">Modeling</a></li>
+        </ul>
+    
+    </div>
+
+</details>
+<hr class="svelte-1q6ixhq">
+        
+	</div>
+	<div style="clear:both"></div>
+</div>
+    
+</div>
+
+</div>
+			
+
+    </div>
+    <footer>
+    <nav class="social-links">
+        <a href="https://patreon.com/cutievirus" target="_blank"><span style="--size:16px">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" xml:space="preserve" role="img" class="patreon svelte-1v1lddd" data-radius="1"><path d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2
+	C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33
+	c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.itch.io" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.37069 220.73612" role="img" class="itchio svelte-1v1lddd" data-radius="1"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" color="currentColor" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://ella.cutievirus.com" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" role="img" class="bluesky svelte-1v1lddd" data-radius="1"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"></path></svg>
+</span></a>
+        <a href="https://cutievirus.com/discord" target="_blank"><span style="--size:16px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.644 96" role="img" class="discord svelte-1v1lddd" data-radius="1"><path d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z" fill="currentColor"></path></svg>
+</span></a>
+    </nav>
+    
+    
+    
+</footer>
+</div>
+	
+
+
+			
+			<script>
+				{
+					__sveltekit_19s9rsq = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null,{"type":"data","data":{category:"MV3D",pluginName:"mv3d",PluginName:"MV3D",premium:"?"},"uses":{"params":["vz"]}},null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BZbYkm9g.js"),
+						import("../../_app/immutable/entry/app.D23NuegA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 3, 4, 13],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
