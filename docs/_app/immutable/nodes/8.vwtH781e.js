@@ -1,4 +1,4 @@
-import{s as D,n as P}from"../chunks/scheduler.BjkBv5nx.js";import{S as C,i as k,t as $,c as g,a as p,b as w,d as l,m as x,e as M,f as d,g as f,h as v,k as y,l as G,n as R}from"../chunks/index.BT_eMuJg.js";import"../chunks/Anchor.DPTg1Ks6.js";import{M as S,D as V}from"../chunks/DocNav.D3EDvnwi.js";import{P as Z}from"../chunks/PageTitle.9YCIYH6H.js";function b(_){let r,n,a,e,s="MV3D and MZ3D are 3D rendering plugins for RPG Maker MV and RPG Maker MZ.",m,o,u,c;return n=new Z({props:{title:"Documentation",category:""}}),o=new V({}),{c(){r=$(`\r
+import{s as D,n as P}from"../chunks/scheduler.BjkBv5nx.js";import{S as C,i as k,t as $,c as g,a as p,b as w,d as l,m as x,e as M,f as d,g as f,h as v,k as y,l as G,n as R}from"../chunks/index.BT_eMuJg.js";import"../chunks/Anchor.DPTg1Ks6.js";import{M as S,D as V}from"../chunks/DocNav.D3EDvnwi.js";import{P as Z}from"../chunks/PageTitle.CRO4oYBw.js";function b(_){let r,n,a,e,s="MV3D and MZ3D are 3D rendering plugins for RPG Maker MV and RPG Maker MZ.",m,o,u,c;return n=new Z({props:{title:"Documentation",category:""}}),o=new V({}),{c(){r=$(`\r
 \r
 `),g(n.$$.fragment),a=$(`\r
 \r
