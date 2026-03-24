@@ -1,0 +1,17 @@
+:root{
+	--scale:1.9;
+	--font12-family: "Roboto", sans-serif;
+	--font12-size: #{scale(11px)};
+	--font10-family: "Roboto", sans-serif;
+	--font10-size: #{scale(8px)};
+	--fontmonospace-family: "Roboto Mono", monospace;
+	--fontmonospace-size: #{scale(9px)};
+}
+[data-theme*="2k3"]{
+	--font12-family: PixelMplus12,monospace;
+	--font12-size: #{scale(12px)};
+	--font10-family: PixelMplus10,monospace;
+	--font10-size: #{scale(10px)};
+	--fontmonospace-family: PixelMplus10,monospace;
+	--fontmonospace-size: #{scale(10px)};
+}

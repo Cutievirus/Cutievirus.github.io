@@ -1,0 +1,75 @@
+$scale:var(--scale,2);
+$breakpoint-mobile:480px*2;
+
+$pink: #ff8787;
+$dark-gray: #312c2c;
+$white: #fff;
+$gray: #666;
+
+$error-text-color: red;
+
+@function scale($value) {
+	@return calc($value * $scale);
+}
+
+@mixin text-shadow{
+	text-shadow: scale(1px) scale(1px) 0 black;
+	//scale(.5px) scale(1px) 0 black,
+	//scale(1px) scale(.5px) 0 black,
+	//0 scale(1px) 0 black,
+	//scale(1px) 0 0 black;
+}
+
+@mixin drop-shadow{
+	text-shadow: none;
+	filter:--drop-shadow();
+}
+
+@mixin font12{
+	font-family: var(--font12-family);
+	font-size: var(--font12-size);
+}
+@mixin font10{
+	font-family: var(--font10-family);
+	font-size: var(--font10-size);
+}
+@mixin fontmonospace{
+	font-family: var(--fontmonospace-family);
+	font-size: var(--fontmonospace-size);
+}
+
+@mixin text-gradient{
+	background-clip: text;
+	color: transparent;
+	background-image: linear-gradient(var(--color,gold), color-mix(in lch,var(--color,gold),white 90%),var(--color,gold),color-mix(in lch,var(--color,gold),red 33%));
+}
+
+@function --drop-shadow() {
+	@return drop-shadow(scale(1px) scale(1px) 0 black);
+}
+
+
+@function --recolor($color) {
+		$r: calc(red($color) / 255);
+		$g: calc(green($color) / 255);
+		$b: calc(blue($color) / 255);
+		$a: 1;
+	
+		// Color filter
+		$svg-filter-id: "recolor-filter";
+		$colorFilter: url('data:image/svg+xml;utf8,\
+			<svg xmlns="http://www.w3.org/2000/svg">\
+				<filter id="#{$svg-filter-id}" color-interpolation-filters="sRGB">\
+					<feColorMatrix type="matrix" values="\
+						0 0 0 0 #{$r}\
+						0 0 0 0 #{$g}\
+						0 0 0 0 #{$b}\
+						0 0 0 #{$a} 0\
+					"/>\
+				</filter>\
+			</svg>\
+			##{$svg-filter-id}');
+	
+		// Output the appropriate filter based on browser support
+		@return $colorFilter;
+}
