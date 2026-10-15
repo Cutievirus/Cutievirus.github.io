@@ -32,5 +32,6 @@
         </a>
 		<!--a href="/redeem">Redeem</a-->
 		<a href="/docs">Documentation</a>
+		<a href="/connect">Connect</a>
 	</nav>
 </header>

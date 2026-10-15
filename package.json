@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^2.0.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"color": "^4.2.3",
 		"vite-plugin-dynamic-import": "^1.5.0",
