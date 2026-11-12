@@ -170,7 +170,7 @@ img,x,y,w,h|alpha|glow,glowintensity|anim:animx,animy
     The slant function can be used to give the walls of the tile a slight angle instead of being perfectly vertical.
     The exact angle will vary depending on the height of the tile, because the value provided is the extra vertical distance the bottom of the tile will occupy.
 </p>
-<Code>width(<samp title="number">n</samp>)</Code>
+<Code>slant(<samp title="number">n</samp>)</Code>
 
 <Version block {premium}>
     <Anchor h2 id="shadow">Shadow Function</Anchor>
