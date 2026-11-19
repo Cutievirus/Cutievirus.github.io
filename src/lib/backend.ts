@@ -40,16 +40,34 @@ export async function linkItchio(accessToken: string, state: string) {
 	return data;
 }
 
+export interface ConnectionSummary {
+	source: 'patreon' | 'itchio';
+	remote_id: string;
+	avatar_url: string | null;
+	display_name: string | null;
+	username: string | null;
+	expires_at: string | null;
+	updated_at: string;
+}
+
 export interface Me {
-	user: { id: string; is_admin: boolean };
-	profile: { display_name: string | null; created_at: string };
-	starmium: number;
-	patron: {
-		tier: string | null;
-		lifetime_cents: number;
-		earning: number;
-		last_synced_at: string | null;
+	profile: {
+		id: string;
+		display_name: string;
+		avatar_url: string | null;
+		is_admin: boolean;
+		created_at: string;
+	};
+	connections: ConnectionSummary[];
+	membership: {
+		tier_title: string;
+		tier_amount_cents: number;
+		patron_status: string | null;
+		lifetime_support_cents: number;
 	} | null;
+	keys: { key: string; claimed_at: string; products: { name: string; title: string } }[];
+	starmium: number;
+	starmium_sources: { source_key: string; balance: number }[];
 }
 
 /** Signed-in user's profile, starmium balance and patron status. */
