@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { supabase } from '$lib/supabase';
-	import { connectProvider, getMe, signOut, type ConnectionSummary, type Me } from '$lib/backend';
+	import {
+		connectProvider,
+		getMe,
+		removeConnection,
+		signOut,
+		type ConnectionSummary,
+		type Me
+	} from '$lib/backend';
 	import Anchor from '$lib/components/Anchor.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Img from '$lib/components/Img.svelte';
@@ -14,6 +21,7 @@
 	let me: Me | null = null;
 	let error = '';
 	let busy = false;
+	let confirmRemoveKey = '';
 
 	const iconSize = 16;
 
@@ -39,10 +47,6 @@
 	}
 
 	async function connect(source: 'patreon' | 'itchio') {
-		if (source === 'itchio' && !session) {
-			error = 'itch.io links to an existing account — connect Patreon first.';
-			return;
-		}
 		busy = true;
 		error = '';
 		try {
@@ -53,12 +57,41 @@
 		}
 	}
 
+	async function remove(connection: ConnectionSummary) {
+		if (confirmRemoveKey !== connection.key) {
+			confirmRemoveKey = connection.key;
+			return;
+		}
+		confirmRemoveKey = '';
+		busy = true;
+		error = '';
+		try {
+			await removeConnection(connection.source, connection.remote_id);
+			await loadMe();
+		} catch {
+			error = 'Could not remove that connection.';
+		}
+		busy = false;
+	}
+
 	function expired(connection: ConnectionSummary) {
 		return connection.expires_at != null && new Date(connection.expires_at).getTime() < Date.now();
 	}
 
 	function starmium(balance: number) {
 		return (balance / 100).toFixed(2);
+	}
+
+	/** 'Cutievirus(patreon)' — the source keeps same-named accounts unambiguous. */
+	function label(connection: ConnectionSummary) {
+		const name = connection.display_name ?? connection.username ?? connection.remote_id;
+		return `${name}(${connection.source === 'itchio' ? 'itch.io' : 'patreon'})`;
+	}
+
+	function tier(connection: ConnectionSummary) {
+		if (!me || connection.source !== 'patreon') return null;
+		const m = me.memberships.find((x) => x.patreon_user_id === connection.remote_id);
+		return m && m.patron_status === 'active_patron' ? m.tier_title : null;
 	}
 </script>
 
@@ -80,12 +113,34 @@
 					{#if connection.avatar_url}
 						<Img src={connection.avatar_url} width={iconSize} height={iconSize} radius={1} alt="" />
 					{/if}
-					{connection.display_name}
+					{label(connection)}
+					{#if connection.is_primary}<span class="primary">(primary)</span>{/if}
 					{#if expired(connection)}<span class="expired">(expired)</span>{/if}
+					{#if tier(connection)}<span>— {tier(connection)}</span>{/if}
+					<span class="conn-starmium">☆{starmium(connection.starmium.available)}</span>
+					{#if !connection.is_primary}
+						<button
+							class="remove"
+							disabled={busy}
+							onclick={() => remove(connection)}
+						>{confirmRemoveKey === connection.key ? 'Remove?' : 'Remove'}</button>
+					{/if}
 				</li>
 			{/each}
 		</ul>
 		<p>☆{starmium(me.starmium)}</p>
+	{/if}
+
+	{#if me && me.redemptions.length}
+		<Anchor h2>Your Download Keys</Anchor>
+		<ul>
+			{#each me.redemptions as redemption}
+				<li>
+					{redemption.products?.title ?? redemption.product_name}:
+					<a href={redemption.download_key}>{redemption.download_key}</a>
+				</li>
+			{/each}
+		</ul>
 	{/if}
 
 	{#if session}
@@ -104,6 +159,19 @@
 
 	.expired {
 		color: $error-text-color;
+	}
+
+	.primary {
+		opacity: 0.7;
+	}
+
+	.conn-starmium {
+		float: right;
+	}
+
+	.remove {
+		float: right;
+		margin-left: scale(4px);
 	}
 
 	ul {

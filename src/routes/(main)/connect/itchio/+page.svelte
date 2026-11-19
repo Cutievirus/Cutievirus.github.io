@@ -13,8 +13,16 @@
 			// scrub the token from the address bar before doing anything else
 			history.replaceState(null, '', location.pathname);
 			if (!access_token || !state) throw new Error('missing token');
-			await linkItchio(access_token, state);
-			location.href = '/connect';
+			const result = await linkItchio(access_token, state);
+			if (result.login) {
+				// signing in to the account this itch.io connection belongs to
+				location.href = result.login;
+			} else if (result.pending) {
+				// creating / connecting / moving / merging needs a confirmation
+				location.href = `/connect/confirm?pending=${result.pending}`;
+			} else {
+				location.href = '/connect';
+			}
 		} catch {
 			location.href = '/connect?error=itchio_failed';
 		}
