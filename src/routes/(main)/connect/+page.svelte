@@ -34,8 +34,15 @@
 			else me = null;
 		});
 		if (session) loadMe();
-		if (new URLSearchParams(location.search).get('error'))
-			error = 'That connection failed. Please try again.';
+		const errorParam = new URLSearchParams(location.search).get('error');
+		if (errorParam) {
+			// known codes get the friendly line; anything else is a specific
+			// reason passed through from a flow, so show it verbatim
+			const codes = ['itchio_failed', 'patreon_failed', 'bad_state', 'missing_code'];
+			error = codes.includes(errorParam)
+				? 'That connection failed. Please try again.'
+				: `That connection failed: ${errorParam}`;
+		}
 	});
 
 	async function loadMe() {

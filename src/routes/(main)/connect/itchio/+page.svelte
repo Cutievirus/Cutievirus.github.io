@@ -6,13 +6,15 @@
 
 	onMount(async () => {
 		try {
-			// itch.io returns its token in the URL fragment, never sent to a server
+			// itch.io returns its token in the URL fragment, never sent to a
+			// server; check the query string too, in case that ever changes
 			const hash = new URLSearchParams(location.hash.slice(1));
-			const access_token = hash.get('access_token');
-			const state = hash.get('state');
+			const query = new URLSearchParams(location.search);
+			const access_token = hash.get('access_token') ?? query.get('access_token');
+			const state = hash.get('state') ?? query.get('state');
 			// scrub the token from the address bar before doing anything else
 			history.replaceState(null, '', location.pathname);
-			if (!access_token || !state) throw new Error('missing token');
+			if (!access_token || !state) throw new Error('missing token or state from itch.io');
 			const result = await linkItchio(access_token, state);
 			if (result.login) {
 				// signing in to the account this itch.io connection belongs to
@@ -23,8 +25,10 @@
 			} else {
 				location.href = '/connect';
 			}
-		} catch {
-			location.href = '/connect?error=itchio_failed';
+		} catch (e) {
+			// carry the real reason back so the connect page can show it
+			const detail = e instanceof Error ? e.message : 'itch.io connection failed';
+			location.href = `/connect?error=${encodeURIComponent(detail)}`;
 		}
 	});
 </script>
